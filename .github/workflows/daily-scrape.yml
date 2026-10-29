@@ -43,5 +43,10 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Update Super Decathlon listings ($(date -u +'%Y-%m-%d'))"
-            git push
+            # The branch may have moved since this run checked it out (a code
+            # push mid-run, or a re-run of an older attempt), so replay the
+            # fresh page on top of the latest commit first; -X theirs keeps
+            # this run's page if another run changed it too.
+            git pull --rebase -X theirs origin "$GITHUB_REF_NAME"
+            git push origin HEAD:"$GITHUB_REF_NAME"
           fi
