@@ -18,7 +18,7 @@ PAGE_TITLE = "Other Super Decathlon Ads on the Web"
 EXTERNAL_SEARCH_LINKS = [
     ("Trade-A-Plane", "https://www.trade-a-plane.com/filtered/search?s-type=aircraft&s-keyword-search=super+decathlon&s-original-search=super+decathlon"),
     ("Controller", "https://www.controller.com/listings?keywords=super%20decathlon"),
-    ("ASO", "https://aso.com/search?q=Super Decathlon"),
+    ("ASO", "https://aso.com/search?q=Super+Decathlon"),
 ]
 
 
